@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Setting up Eclipse for "Problem Solving with Data Structures: A Multimedia Approach"</title>
+  </head>
+  <body>
+    <h1>Setting up Eclipse for "Problem Solving with Data Structures: A Multimedia Approach"</h1>
+    Many java developers prefer to write code in an advanced integrated development environment (IDE) like <a href="https://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/oxygen2">Eclipse</a>, <a href="https://netbeans.org/features/java/index.html">Netbeans</a>, or <a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a>.
+    They allow you to quickly navigate your code, visually debug, refactor, synchronize with source code repository like github, and other features.
+    This guide will help you set up a project in the Eclipse IDE for programming the examples and problems from the book <i>Problem Solving with Data Structures: A Multimedia Approach</i> by Mark Guzdial and Barbara Ericson.
+    <ol>
+      <li>Download and extract Eclipse IDE</li>
+      <li>Run eclipse.exe and start a new project.</br><img src="new-project.png"></li>
+      <li>Download and exctract <a href="http://www.cc.gatech.edu/~mark.guzdial/mediacomp/java-source.zip">java-source.zip</a> from the <a href="http://coweb.cc.gatech.edu/mediaComp-teach">book's website</a>
+      <li>Download and extract the <a href="http://www.cc.gatech.edu/~mark.guzdial/mediacomp/media-source-ds.zip"><code>media-source-ds.zip</code></a> file from the book's website.</li>
+      <li>Make a new folder called <code>lib</code> in your eclipse project directory</li>
+      <li>Copy the <code>jar</code> files from <code>java-source</code> to you projects <code>lib</code> directory </br><img src="copy-jars-to-lib-1.PNG"/></li>
+      <li>Download the jmusic jar from the <a href="http://explodingart.com/jmusic/GetjMusic.html">project page</a></li>
+      <li>Copy the jmusic jar into your eclipse project's lib directory.</li>
+      <li>In the eclipse IDE, select the jars, right click them, and add them to your class path</br><img src="add-to-build-path.PNG"/></li>
+      <li>Move all of the books classes into a new java package</li>
+        <ul>
+          <li>Select all of the java files you added to your eclipse project</li>
+          <li>right click them, 'refactor', then 'move'</li>
+          <li>Create a new package for them<br><img src="create-package.PNG"/></li>
+        </ul>
+      <li>You should now have a project read to go! To test this:
+        <ul>
+          <li>Copy the <a href="http://ada.evergreen.edu/csf/java18w/labs/DoubleRed.java"><code>DoubleRed.java</code></a> file into your projects src directory and run it!</li>
+          <li>Hint: you will have to import the classes from your newly created <code>book</code> package</li>
+          <li>Hint: Make sure the <code>mediaPath</code> is set correctly to the <code>media-source</code> directory you downloaded and extracted earlier</li>
+          <li>Here is what happened when I ran the file and selected an image</br><img src="example.PNG"/></li>
+    </ol>
+    Here is <a href="https://github.com/newjam/csf-eclipse-example">this tutorial and my eclipse project</a> after following these steps.
+    This is just the begining!
+    In a more professional project you might use a build tool like <a href="https://maven.apache.org/what-is-maven.html">maven</a> or <a href="https://gradle.org/">gradle</a> to automatically download your dependencies from an online repository instead of copying and pasting .jar files everywhere.
+  </body>
+</html>
